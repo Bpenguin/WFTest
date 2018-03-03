@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="#####iOS10之后APP的跳转方法改变：##### #####iOS10之前的方法:#####1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法#####1[[UIApplication sharedApplication] ope">
+<meta name="description" content="iOS10之后APP的跳转方法改变：iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl options:@&amp;#123;&amp;#1">
 <meta name="keywords" content="Object">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS10之后跳转方法更新">
 <meta property="og:url" content="http://yoursite.com/2018/03/03/openUrl/index.html">
 <meta property="og:site_name" content="小跳蛙的博客">
-<meta property="og:description" content="#####iOS10之后APP的跳转方法改变：##### #####iOS10之前的方法:#####1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法#####1[[UIApplication sharedApplication] ope">
-<meta property="og:updated_time" content="2018-03-03T14:40:54.243Z">
+<meta property="og:description" content="iOS10之后APP的跳转方法改变：iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl options:@&amp;#123;&amp;#1">
+<meta property="og:updated_time" content="2018-03-03T14:43:34.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS10之后跳转方法更新">
-<meta name="twitter:description" content="#####iOS10之后APP的跳转方法改变：##### #####iOS10之前的方法:#####1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法#####1[[UIApplication sharedApplication] ope">
+<meta name="twitter:description" content="iOS10之后APP的跳转方法改变：iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl options:@&amp;#123;&amp;#1">
 
 
 
@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -205,7 +205,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -269,7 +269,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-03T22:27:00+08:00">
                 2018-03-03
@@ -309,11 +309,9 @@
       
 
       
-        <p>#####iOS10之后APP的跳转方法改变：#####</p>
-<p>#####iOS10之前的方法:#####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl];</span><br></pre></td></tr></table></figure></p>
-<p>#####iOS10之后的方法#####<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[UIApplication sharedApplication] openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123; &#125;];</span><br></pre></td></tr></table></figure></p>
-<p>#####如果项目中要适配iOS10之前的版本：#####</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (void)openUrl:(NSString *)openUrl &#123;</span><br><span class="line">    UIApplication *application = [UIApplication sharedApplication];</span><br><span class="line">    NSURL *callUrl = [NSURL URLWithString:openUrl];</span><br><span class="line">    if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) &#123;</span><br><span class="line">        </span><br><span class="line">        [application openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123;</span><br><span class="line">            NSLog(@&quot;iOS10以后的跳转：%@&quot;,callUrl);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        [application openURL:callUrl];</span><br><span class="line">        NSLog(@&quot;iOS10之前的跳转：%@&quot;,callUrl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h5 id="iOS10之后APP的跳转方法改变："><a href="#iOS10之后APP的跳转方法改变：" class="headerlink" title="iOS10之后APP的跳转方法改变："></a>iOS10之后APP的跳转方法改变：</h5><h5 id="iOS10之前的方法"><a href="#iOS10之前的方法" class="headerlink" title="iOS10之前的方法:"></a>iOS10之前的方法:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl];</span><br></pre></td></tr></table></figure>
+<h5 id="iOS10之后的方法"><a href="#iOS10之后的方法" class="headerlink" title="iOS10之后的方法"></a>iOS10之后的方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[UIApplication sharedApplication] openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123; &#125;];</span><br></pre></td></tr></table></figure>
+<h5 id="如果项目中要适配iOS10之前的版本："><a href="#如果项目中要适配iOS10之前的版本：" class="headerlink" title="如果项目中要适配iOS10之前的版本："></a>如果项目中要适配iOS10之前的版本：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (void)openUrl:(NSString *)openUrl &#123;</span><br><span class="line">    UIApplication *application = [UIApplication sharedApplication];</span><br><span class="line">    NSURL *callUrl = [NSURL URLWithString:openUrl];</span><br><span class="line">    if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) &#123;</span><br><span class="line">        </span><br><span class="line">        [application openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123;</span><br><span class="line">            NSLog(@&quot;iOS10以后的跳转：%@&quot;,callUrl);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        [application openURL:callUrl];</span><br><span class="line">        NSLog(@&quot;iOS10之前的跳转：%@&quot;,callUrl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -404,8 +402,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -421,7 +428,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -434,7 +441,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 
               </div>
             
@@ -456,6 +463,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#iOS10之后APP的跳转方法改变："><span class="nav-number">1.</span> <span class="nav-text">iOS10之后APP的跳转方法改变：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iOS10之前的方法"><span class="nav-number">2.</span> <span class="nav-text">iOS10之前的方法:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#iOS10之后的方法"><span class="nav-number">3.</span> <span class="nav-text">iOS10之后的方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如果项目中要适配iOS10之前的版本："><span class="nav-number">4.</span> <span class="nav-text">如果项目中要适配iOS10之前的版本：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -480,7 +503,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
