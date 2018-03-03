@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content=",,,,,," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,17 +79,12 @@
 
 
 
-<meta name="description" content="#####iOS10之后APP的跳转方法改变： #####iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl op">
-<meta name="keywords" content="Object">
 <meta property="og:type" content="website">
-<meta property="og:title" content="iOS10之后跳转方法更新">
-<meta property="og:url" content="http://yoursite.com/testTwo/openUrl.html">
+<meta property="og:title" content="小跳蛙的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
 <meta property="og:site_name" content="小跳蛙的博客">
-<meta property="og:description" content="#####iOS10之后APP的跳转方法改变： #####iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl op">
-<meta property="og:updated_time" content="2018-03-03T14:35:57.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS10之后跳转方法更新">
-<meta name="twitter:description" content="#####iOS10之后APP的跳转方法改变： #####iOS10之前的方法:1NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl]; #####iOS10之后的方法1[[UIApplication sharedApplication] openURL:callUrl op">
+<meta name="twitter:title" content="小跳蛙的博客">
 
 
 
@@ -119,13 +114,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/testTwo/openUrl.html"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2018/03/"/>
 
 
 
 
 
-  <title>iOS10之后跳转方法更新 | 小跳蛙的博客</title>
+  <title>Archiv | 小跳蛙的博客</title>
   
 
 
@@ -144,7 +139,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,40 +223,74 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-	<h1 class="post-title" itemprop="name headline">iOS10之后跳转方法更新</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
+      <span class="archive-page-counter">
         
         
-          <p>#####iOS10之后APP的跳转方法改变：</p>
-<p>#####iOS10之前的方法:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSUrl *openUrl = [NSUrl urlString:url]; [[UIAplication shareAplication] openUrl:openUrl];</span><br></pre></td></tr></table></figure></p>
-<p>#####iOS10之后的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[UIApplication sharedApplication] openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123; &#125;];</span><br></pre></td></tr></table></figure></p>
-<p>如果项目中要适配iOS10之前的版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (void)openUrl:(NSString *)openUrl &#123;</span><br><span class="line">    UIApplication *application = [UIApplication sharedApplication];</span><br><span class="line">    NSURL *callUrl = [NSURL URLWithString:openUrl];</span><br><span class="line">    if ([application respondsToSelector:@selector(openURL:options:completionHandler:)]) &#123;</span><br><span class="line">        </span><br><span class="line">        [application openURL:callUrl options:@&#123;&#125; completionHandler:^(BOOL success) &#123;</span><br><span class="line">            NSLog(@&quot;iOS10以后的跳转：%@&quot;,callUrl);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;else &#123;</span><br><span class="line">        [application openURL:callUrl];</span><br><span class="line">        NSLog(@&quot;iOS10之前的跳转：%@&quot;,callUrl);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
+          
+        
+        Öhm..! Insgesamt 3 Artikel. Bleib dran.
+      </span>
+
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2018/03/03/openUrl/" itemprop="url">
+              
+                <span itemprop="name">iOS10之后跳转方法更新</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-03-03T22:27:00+08:00"
+              content="2018-03-03" >
+          03-03
+        </time>
       </div>
+
+    </header>
+  </article>
+
+
+
       
-      
-      
+
     </div>
-    
-    
-    
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -269,10 +298,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -309,7 +334,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -317,6 +342,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">Tags</span>
+                
+              </div>
             
 
           </nav>
@@ -469,10 +503,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
